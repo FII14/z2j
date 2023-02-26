@@ -10,6 +10,11 @@ fi
 # Ask for zip file name
 read -p "Enter zip file name: " zipfile
 
+if [[ ! -f "${zipfile}" ]]; then
+    echo "Zip file not found."
+    exit
+fi
+
 # Ask for wordlist file name
 read -p "Enter wordlist file name: " wordlist
 
