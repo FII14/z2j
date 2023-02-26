@@ -1,4 +1,4 @@
 #!/bin/bash
 
-chmod +x src/z2h
+chmod +x src/z2j
 cp src/z2j /usr/bin
