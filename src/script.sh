@@ -46,10 +46,4 @@ echo "Starting cracking..."
 john --wordlist="${wordlist}" --format=PKZIP "${hash}"
 
 # Show password if found
-if [ -f "john.pot" ]
-then
-    password=$(john --show "${hash}" | cut -d: -f2)
-    echo "Password found: $password"
-else
-    echo "Password not found."
-fi
+john --show "${hash}"
