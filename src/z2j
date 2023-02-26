@@ -8,9 +8,20 @@
 # 
 # [+] Created by FII14.
 
-echo ""
-echo "Welcome to the z2j"
-echo ""
+d=$(date)
+echo "Starting z2j 1.0 at ${d}"
+sleep 5
+
+clear
+
+cat << EOF
+ _________     _ 
+|__  /___ \   | | Author  | FII14
+  / /  __) |  | | Team    | Indonesia Backtrack Team
+ / /_ / __/ |_| | Github  | https://github.com/FII14
+/____|_____\___/  Version | 1.0
+
+EOF
 
 # Asking for the zip file name and storing it in the variable zipfile.
 read -p "Enter zip file name: " zipfile
