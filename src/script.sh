@@ -31,13 +31,6 @@ if [[ -f "${hash}" ]]; then
     exit
 fi
 
-# Check if zip file exists
-if [ ! -f "$zipfile" ]
-then
-    echo "Zip file not found."
-    exit
-fi
-
 # Create zip hash file using zip2john
 zip2john "$zipfile" > "$hash"
 
