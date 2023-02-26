@@ -1,35 +1,38 @@
 #!/bin/bash
 
-# Ask for zip file name
+# Asking for the zip file name and storing it in the variable zipfile.
 read -p "Enter zip file name: " zipfile
 
+# Checking if the file exists or not.
 if [[ ! -f "${zipfile}" ]]; then
     echo "Zip file not found."
     exit
 fi
 
-# Ask for wordlist file name
+# Asking for the wordlist file name and storing it in the variable wordlist.
 read -p "Enter wordlist file name: " wordlist
 
+# Checking if the file exists or not.
 if [[ ! -f "${wordlist}" ]]; then
     echo "Wordlist file not found."
     exit
 fi
 
-# Ask for hash file name
+# Asking for the hash file name and storing it in the variable hash.
 read -p "Enter hash file name: " hash
 
+# Checking if the file exists or not.
 if [[ -f "${hash}" ]]; then
     echo "Hash file already exists."
     exit
 fi
 
-# Create zip hash file using zip2john
+# Creating a hash file from the zip file.
 zip2john "$zipfile" > "$hash"
 
-# Try to crack zip file password
+# Using the wordlist to crack the hash file.
 echo "Starting cracking..."
 john --wordlist="${wordlist}" --format=PKZIP "${hash}"
 
-# Show password if found
+# Showing the password if found.
 john --show "${hash}"
