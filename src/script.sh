@@ -15,6 +15,10 @@ read -p "Enter zip file name: " zipfile
 if [[ ! -f "${zipfile}" ]]; then
     echo "Zip file not found."
     exit
+
+elif [[ -f "${zipfile}" && "${zipfile##*.}" != "zip" ]]; then
+    echo "${zipfile} file are not zip file."
+    exit
 fi
 
 # Asking for the wordlist file name and storing it in the variable wordlist.
