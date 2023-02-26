@@ -18,8 +18,18 @@ fi
 # Ask for wordlist file name
 read -p "Enter wordlist file name: " wordlist
 
+if [[ ! -f "${wordlist}" ]]; then
+    echo "Wordlist file not found."
+    exit
+fi
+
 # Ask for hash file name
 read -p "Enter hash file name: " hash
+
+if [[ -f "${hash}" ]]; then
+    echo "Hash file already exists."
+    exit
+fi
 
 # Check if zip file exists
 if [ ! -f "$zipfile" ]
