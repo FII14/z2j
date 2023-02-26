@@ -8,6 +8,10 @@
 # 
 # [+] Created by FII14.
 
+echo ""
+echo "Welcome to the z2j"
+echo ""
+
 # Asking for the zip file name and storing it in the variable zipfile.
 read -p "Enter zip file name: " zipfile
 
