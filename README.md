@@ -1,3 +1,7 @@
+![](https://img.shields.io/badge/Platform-Kali%20Linux-blue)
+![](https://img.shields.io/badge/Build-Passing-success)
+![](https://img.shields.io/badge/License-MIT-green)
+
 # z2j
 
 zip2john shortcut.
