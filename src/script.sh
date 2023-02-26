@@ -32,6 +32,7 @@ zip2john "$zipfile" > "$hash"
 
 # Using the wordlist to crack the hash file.
 echo "Starting cracking..."
+sleep 3
 john --wordlist="${wordlist}" --format=PKZIP "${hash}"
 
 # Showing the password if found.
