@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Check if zip2john is installed
-if ! command -v zip2john &> /dev/null
-then
-    echo "zip2john not found. Please install it first."
-    exit
-fi
-
 # Ask for zip file name
 read -p "Enter zip file name: " zipfile
 
