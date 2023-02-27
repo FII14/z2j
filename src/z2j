@@ -18,7 +18,7 @@ cat << EOF
  _________     _ 
 |__  /___ \   | | Author  | FII14
   / /  __) |  | | Team    | Indonesia Backtrack Team
- / /_ / __/ |_| | Github  | https://github.com/FII14
+ / /_ / __/ |_| | Github  | https://github.com/FII14/z2j
 /____|_____\___/  Version | 1.0
 
 EOF
